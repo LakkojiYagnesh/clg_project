@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <style>
+        body{
+            background-color: rgb(214, 250, 255);
+        }
+        .loginForm{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 70%;
+            height: 50%;
+        }
+    </style>
+    <title>LoginPage</title>
+</head>
+<body>
+<div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary  z-3">
+      <div class="container-fluid ">
+        <a class="navbar-brand" href="#">
+          <img src="/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+          OnePiece
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav" >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-current="page" href="#" style="font-size:large;">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" style="font-size:large;">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" style="font-size:large;">Logout</a>
+            </li>
+            <li>
+              <a class="nav-link " href="/admins" style="font-size:large; color : green">Admin</a>
+            </li>
+          </ul>
+        </div>
+      </div>  
+    </nav>
+  </div>
+  <br>
+   
+  <div class="loginForm">
+    <p class="h4">Login as Adminstrator</p>
+    <div class="h6" style="color: red;">{{errorValue}}</div>
+    <form method="post">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label h6">Please enter admin's Email address</label>
+            <input type="email" class="form-control"  name="email" id="email" aria-describedby="emailHelp" required>
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label h6">Password</label>
+            <input type="password" class="form-control"  name="password" id="exampleInputPassword1" required>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Login</button>
+        
+    </form>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
